@@ -15,12 +15,13 @@ export default class BabyHog extends Component {
   }
 
   changeWeight = (e) => {
-    // nothing needs to change here
     const newWeight = e.target.name === "+" ? (this.state.weight + 10) : (this.state.weight - 10)
     this.setState({
       weight: newWeight
     })
   }
+
+  
 
   render() {
     return (
@@ -28,7 +29,7 @@ export default class BabyHog extends Component {
         <h1>Name</h1>
         <h3>Weight:</h3>
         <h3>Hobby:</h3>
-        <h4>Eye Color:</h4>
+        <h4>Eye Color: {}</h4>
           
         <Button name="+">
           Increase Weight
@@ -44,4 +45,8 @@ export default class BabyHog extends Component {
       </li>
     )
   }
+}
+
+BabyHog.defaultProps = {
+
 }
